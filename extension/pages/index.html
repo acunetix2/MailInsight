@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MailInsight</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">
+      <img src="icon.png" alt="MailInsight logo" />
+      <span>MailInsight</span>
+    </div>
+    <!-- ...existing code... -->
+<nav class="nav-links">
+  <div class="nav-item">
+    <a href="index.html" onclick="toggleDropdown(event, 'home-dropdown')">Home</a>
+  </div>
+  <div class="nav-item">
+    <a href="#" onclick="toggleDropdown(event, 'features-dropdown')">Features <span class="dropdown-arrow">&#9662;</span></a>
+    <div class="dropdown-content" id="features-dropdown">
+      <div class="feature-card-dropdown">
+        <h4>EMAIL VERIFICATION</h4>
+        <p>Mail Insight verifies sender domains and detects impersonation by comparing email sources against trusted domain records and known phishing patterns.</p>
+      </div>
+      <div class="feature-card-dropdown">
+        <h4>SCANNING LINKS AND IMAGES</h4>
+        <p>It scans embedded links in emails, checks for mismatched URLs, and validates them using external threat intelligence services like Google Safe Browse.</p>
+      </div>
+      <div class="feature-card-dropdown">
+        <h4>RISK SCORING</h4>
+        <p>Every email gets a risk score based on factors like the sender's history, message content, and known scams.</p>
+      </div>
+      <div class="feature-card-dropdown">
+        <h4>ALERT SYSTEM</h4>
+        <p>MailInsight provides real-time pop-up warnings and personalized security recommendations based on the email's risk score to guide safe user actions.</p>
+      </div>
+    </div>
+  </div>
+  <div class="nav-item">
+    <a href="#" onclick="toggleDropdown(event, 'pricing-dropdown')">Pricing <span class="dropdown-arrow">&#9662;</span></a>
+    <div class="dropdown-content" id="pricing-dropdown">
+      <div class="plan-card">
+        <span class="plan-icon">🆓</span>
+        <h4>Free Basic Plan</h4>
+        <p><strong>Price:</strong> Free</p>
+        <p>Limited email verification, basic link scanning, standard risk scoring, email alerts.<br></p>
+      </div>
+      <div class="plan-card">
+        <span class="plan-icon">⭐</span>
+        <h4>Standard Plan</h4>
+        <p><strong>Price:</strong> $5/month (or $50/year, save 17%)</p>
+        <p>All Free Basic, plus: unlimited email verification, advanced link & image scanning, detailed risk scoring, real-time pop-up warnings & recommendations, daily security reports, priority email support.<br></p>
+      </div>
+      <div class="plan-card">
+        <span class="plan-icon">💎</span>
+        <h4>Premium Plan</h4>
+        <p><strong>Price:</strong> $15/month (or $150/year, save 17%)</p>
+        <p>All Standard, plus: advanced threat intelligence integration, customizable risk scoring, API access, dedicated account manager, 24/7 phone & chat support.<br></p>
+      </div>
+    </div>
+  </div>
+  <!-- Add this after the last .nav-item in your <nav class="nav-links"> -->
+<div class="nav-item">
+  <a href="#" onclick="toggleDropdown(event, 'download-dropdown')">Download <span class="dropdown-arrow">&#9662;</span></a>
+  <div class="dropdown-content" id="download-dropdown">
+    <ul style="list-style:none; padding:0; margin:0;">
+      <li style="margin-bottom:10px;">
+        <a href="https://chrome.google.com/webstore/detail/mailinsight-extension-link" target="_blank" rel="noopener" class="download-link">
+          <span style="font-size:1.2em;vertical-align:middle;">🧩</span> Chrome Extension
+        </a>
+      </li>
+      <li style="margin-bottom:10px;">
+        <a href="https://play.google.com/store/apps/details?id=mailinsight.android" target="_blank" rel="noopener" class="download-link">
+          <span style="font-size:1.2em;vertical-align:middle;">🤖</span> Android App
+        </a>
+      </li>
+      <li style="margin-bottom:10px;">
+        <a href="https://apps.apple.com/app/mailinsight-ios" target="_blank" rel="noopener" class="download-link">
+          <span style="font-size:1.2em;vertical-align:middle;">🍏</span> IOS App
+        </a>
+      </li>
+      <li>
+        <a href="https://appsource.microsoft.com/en-us/product/office/WA200005432" target="_blank" rel="noopener" class="download-link">
+          <span style="font-size:1.2em;vertical-align:middle;">📧</span> Outlook Add-in
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+  <div class="nav-item">
+    <a href="#" onclick="toggleDropdown(event, 'tutorial-dropdown')">Tutorial <span class="dropdown-arrow">&#9662;</span></a>
+    <div class="dropdown-content" id="tutorial-dropdown">
+      <ol>
+        <li>Install MailInsight from the Chrome Web Store.</li>
+        <li>Pin the extension to your browser toolbar.</li>
+        <li>Sign in with your email account.</li>
+        <li>Open your inbox and let MailInsight scan your emails in real time.</li>
+        <li>Follow any alerts or recommendations shown by the extension.</li>
+      </ol>
+    </div>
+  </div>
+</nav>
+<!-- ...existing code... -->
+    <!-- Replace your current Sign In button inside the navbar/header with this: -->
+<button class="btn primary small" onclick="window.location.href='https://accounts.google.com/o/oauth2/v2/auth?client_id=YOUR_CLIENT_ID&redirect_uri=YOUR_REDIRECT_URI&response_type=code&scope=email%20profile&access_type=online'">
+  Sign In
+</button>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="welcome">
+    <div class="welcome-text" data-aos="fade-right">
+      <h1>Welcome to <span>MailInsight&reg; : Email Defence</span></h1>
+      <h2>where we protect your data</h2>
+      <p class="subtext">
+        An AI-powered browser extension designed to protect users from phishing and email scams as they happen.
+        MailInsight scans your emails in real-time, providing instant alerts and recommendations to keep your inbox safe.
+        With advanced threat detection, it identifies suspicious links, verifies sender authenticity, and offers personalized security tips.
+        Whether you're using Gmail, Outlook, or any other email service, MailInsight seamlessly integrates to enhance your email security.
+        <br>
+      </p>
+    </div>
+    <div class="welcome-image" data-aos="fade-left">
+      <img src="laptop-scanning.png" alt="Scanning Email Screenshot"  class="image-flex"/>
+      <div class="status-box">
+        <p>youremail@example.com</p>
+        <p>MailInsight is analyzing your inbox</p>
+        <p>Protection Status: <strong>Active</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features" data-aos="fade-up">
+    <div class="feature-card" data-aos="zoom-in" id="feature-card">
+      <div class="icon">🛡️</div>
+      <h3>Real-time Protection</h3>
+      <p>Continuously scans emails and web pages for phishing attempts and malicious content.</p>
+    </div>
+    <div class="feature-card" data-aos="zoom-in" data-aos-delay="100">
+      <div class="icon">⚠️</div>
+      <h3>Threat Alerts</h3>
+      <p>Instant notifications when suspicious activity is detected in your email communication.</p>
+    </div>
+    <div class="feature-card" data-aos="zoom-in" data-aos-delay="200">
+      <div class="icon">📧</div>
+      <h3>Email Security</h3>
+      <p>Advanced AI algorithms that learn and adapt to new phishing techniques as they evolve.</p>
+    </div>
+  </section>
+  <!-- MailInsight Pricing Section -->
+<section class="pricing-modern">
+  <h2 class="pricing-title">Choose the plan that best fits your needs</h2>
+  <div class="pricing-toggle">
+    <button class="toggle-btn active">Monthly</button>
+    <button class="toggle-btn">Yearly <span class="save">save 17%</span></button>
+  </div>
+  <div class="pricing-cards">
+    <div class="pricing-card free">
+      <div class="plan-label">FREE</div>
+      <div class="plan-price">$0 <span class="plan-duration">/user/month</span></div>
+      <button class="plan-btn current" disabled>YOUR CURRENT PLAN</button>
+      <ul class="plan-features">
+        <li>Limited email verification</li>
+        <li>Basic link scanning</li>
+        <li>Standard risk scoring</li>
+        <li>Email alerts</li>
+      </ul>
+    </div>
+    <div class="pricing-card standard">
+      <div class="plan-label">STANDARD <span class="most-popular">Most popular</span></div>
+      <div class="plan-price">$5 <span class="plan-duration">/user/month</span></div>
+      <button class="plan-btn">SELECT PLAN</button>
+      <ul class="plan-features">
+        <li>Unlimited email verification</li>
+        <li>Advanced link & image scanning</li>
+        <li>Detailed risk scoring</li>
+        <li>Real-time pop-up warnings</li>
+        <li>Daily security reports</li>
+        <li>Priority email support</li>
+      </ul>
+    </div>
+    <div class="pricing-card premium">
+      <div class="plan-label">PREMIUM</div>
+      <div class="plan-price">$15 <span class="plan-duration">/user/month</span></div>
+      <button class="plan-btn">SELECT PLAN</button>
+      <ul class="plan-features">
+        <li>All Standard features</li>
+        <li>Advanced threat intelligence</li>
+        <li>Customizable risk scoring</li>
+        <li>API access</li>
+        <li>Dedicated account manager</li>
+        <li>24/7 phone & chat support</li>
+      </ul>
+    </div>
+  </div>
+</section>
+  <section class="newsletter-support">
+  <div class="newsletter-box">
+    <h3>Stay Updated</h3>
+    <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing!');">
+      <input type="email" placeholder="Your email address" required>
+      <button type="submit" class="btn primary small">Subscribe</button>
+    </form>
+  </div>
+  <div class="support-box">
+    <h3>Need Help?</h3>
+    <p>Contact our support team at<br>
+      <a href="mailto:support@mailinsight.com" class="support-link">support@mailinsight.com</a>
+    </p>
+  </div>
+</section>
+<section class="footer-links">
+  <div class="footer-col">
+    <h4>ABOUT US</h4>
+    <ul>
+      <li><a href="#">Contact</a></li>
+      <li><a href="#">Team</a></li>
+      <li><a href="#">Branding</a></li>
+      <li><a href="#">Careers</a></li>
+      <li><a href="#">Press</a></li>
+    </ul>
+  </div>
+  <div class="footer-col">
+    <h4>FEATURES</h4>
+    <ul>
+      <li><a href="#">Email Verification</a></li>
+      <li><a href="#">Link & Image Scanning</a></li>
+      <li><a href="#">Risk Scoring</a></li>
+      <li><a href="#">Alert System</a></li>
+      <li><a href="#">Real-time Protection</a></li>
+    </ul>
+  </div>
+  <div class="footer-col">
+    <h4>SOLUTIONS</h4>
+    <ul>
+      <li><a href="#">Individuals</a></li>
+      <li><a href="#">Small Businesses</a></li>
+      <li><a href="#">Enterprises</a></li>
+      <li><a href="#">Remote Teams</a></li>
+      <li><a href="#">Education</a></li>
+    </ul>
+  </div>
+  <div class="footer-col">
+    <h4>DOWNLOAD</h4>
+    <ul>
+      <li><a href="https://chrome.google.com/webstore/detail/mailinsight-extension-link" target="_blank">Chrome Extension</a></li>
+      <li><a href="https://appsource.microsoft.com/en-us/product/office/WA200005432" target="_blank">Outlook Add-in</a></li>
+      <li><a href="https://play.google.com/store/apps/details?id=mailinsight.android" target="_blank">Android App</a></li>
+      <li><a href="https://apps.apple.com/app/mailinsight-ios" target="_blank">iOS App</a></li>
+    </ul>
+  </div>
+  <div class="footer-col">
+    <h4>RESOURCES</h4>
+    <ul>
+      <li><a href="#">Pricing</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">FAQs</a></li>
+      <li><a href="#">Security Tips</a></li>
+      <li><a href="#">Support</a></li>
+    </ul>
+  </div>
+</section>
+  <!-- Footer -->
+  <footer>&copy; 2025
+    MailInsight | All Rights Reserved
+  </footer>
+  <!-- Scripts -->
+  <script src="script.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>AOS.init();</script>
+</body>
+</html>
